@@ -27,10 +27,10 @@ if [ "$cont" == "n" ] ; then
 fi
 
 echo "Updating APT config"
-sed -i s/"$current_debian_release"/"$target_debian_release" "$apt_config_location"
+sed -i s/"$current_debian_release"/"$target_debian_release"/ "$apt_config_location"
 
 echo "Updating proxmox no subscription file"
-sed -i s/"$current_debian_release"/"$target_debian_release" "$proxmox_source_list_location"
+sed -i s/"$current_debian_release"/"$target_debian_release"/ "$proxmox_source_list_location"
 
 if [ -f "$proxmox_license_source_location" ] ; then
         rm -f "$proxmox_license_source_location"
